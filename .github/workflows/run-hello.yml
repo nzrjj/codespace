@@ -1,0 +1,17 @@
+name: Run Hello Script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run hello.py
+        run: python3 hello.py
+
+      - name: Sleep 30 seconds
+        run: sleep 30
